@@ -18,7 +18,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 output application/json
 ---
 {
-	"status":"hi ashok"
+	"status":"hi ashok how are you"
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
