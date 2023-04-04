@@ -2,12 +2,26 @@
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
-
 trigger:
-- main
-
+  batch: true
+  branches:
+    include:
+      - dev
+  paths:
+    exclude:
+      - azure-pipelines.yml
+      - azure-pipelines-TagnRelease.yml
+      - azure-pipelines-deploy.yml
+      - azure-pipelines-deploy-prod.yml
+      - pom.xml
+  
 pool:
   vmImage: ubuntu-latest
+variables:
+- group: 
+
+    
+  
 
 steps:
 - task: Maven@3
